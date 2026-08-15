@@ -105,36 +105,22 @@ Es importante contar con Docker instalado para la ejecución de este proyecto, [
 
 Una vez que se tiene Docker Desktop, realizar la instalación pertinente (en caso de no haberlo hecho) y realizar el siguiente paso a paso.
 
-1. Realizar la creacion de la cuenta o continuar sin crear una, para asi lograr acceder a la aplicación de Docker Desktop.
-
-2. En la barra de busqueda de la parte superior dentro de **Docker Desktop**, se debe buscar la imagen de MongoDB, asi como se muestra en la imagen se debe descargar la imagen oficial (insignia verde), una vez identificada, presionar en el boton **PULL**.
-
-![Instalar imagen MongoDB en docker Desktop](./staticREADME/InstalarMongo.png)
-
-3. Despues de que se complete la descarga, nos debemos dirigir a la barra lateral izquierda y dirigirnos a la seccion que dice **Images** o imagenes, alli se deberia encontrar la imagen de MongoDB, y como se muestra en la imagen se debe presionar donde se indica.
-
-![Instalar imagen MongoDB en docker Desktop](./staticREADME/ArrancarMongo.png)
-
-4. Saldra una ventana, en donde se debe presionar en **Optional Settings**, aqui es importante colocar los siguientes parametros de configuracion, el nombre del contenedor puede ser cualquiera, el puerto debe ser el **27017**.
-
-![Instalar imagen MongoDB en docker Desktop](./staticREADME/PuertoMongo.png)
+1. Durante la instalacion de Docker se solicita crear una cuenta en DockerHub, se recomienda hacerlo, pero para la ejecucion de este proyecto no es obligatorio.
+2. Abrir una nueva terminal en la carpeta en donde se encuentra el proyecto copiado desde GitHub.
+3. Asegurarse que dentro de la terminal al listar los archivos, se encuentre ubicado donde esta el archivo **docker-compose.yml**.
 
 >[!CAUTION]
-Si el puerto **27017** se encuentra ocupado, es importante garantizar que el contenedor pueda utilizar este puerto, ya que es el que utiliza el proyecto para que la API se logre comunicar con la base de datos.
+Para ejecutar el siguiente comando es fundamental haber instalado Docker correctamente, y garantizar estar en la terminal en la misma ruta donde se encuentra el archivo **docker-compose.yml**, ya que si no es asi, los siguientes comandos ninguno funcionara.
 
-5. Este paso es fundamental, y es que la carpeta **Volumenes** del proyecto clonado, contiene toda la informacion para que MongoDB cargue las colecciones y documentos iniciales. Por ello en la parte de **Host Path** al seleccionar los tres puntos se abrira un explorador de archivos, **Obligatoriamente se selecciona la carpeta Volumenes del proyecto**, luego de hacer eso, en la opcion de **Container Path** se debe escribir el siguiente texto; **/data/db**, una vez hecho eso se puede correr el contenedor con el boton **Run**.
+4. Se ejecutara el siguiente comando, que su tarea es encender el contendor (de mi propiedad) que contiene la base de datos MongoDB con la informacion necesaria para construir las colecciones y documentos iniciales.
 
-![Instalar imagen MongoDB en docker Desktop](./staticREADME/EjecutarMongo.png)
+  ```bash
+  docker compose up 
+  ```
 
-6. Si todos los pasos fueron seguidos correctamente, se deberia ver la siguiente pantalla dentro de **Docker Desktop** que indica que MongoDB en el contenedor ya se encuentra ejecutandose (recuadro blanco y rojo son solo censura).
+5. Una vez se este ejecutando el comando, es fundamental garantizar que esta terminal se encuentre abierta, ya que alli se estara ejecutando la base de datos que necesita la aplicación web.
 
-![Instalar imagen MongoDB en docker Desktop](./staticREADME/EjecutandoMongo.png)
-
->[!IMPORTANT]
-Si la ejecución final del contenedor no salio correctamente, por favor revisar nuevamente el paso a paso expuesto, ya que probablemente se habrá realizado algún paso de forma erronea, **especial atención en la configuracion del puerto y volumen**.
-
-
-Una vez que se tiene ejecutando Docker con MongoDB, hay que volver a la carpeta en donde se encuentra el proyecto clonado y abrir una terminal alli. 
+Una vez que se tiene ejecutando Docker con MongoDB, hay que volver a la carpeta en donde se encuentra el proyecto clonado y abrir una nueva terminal alli. 
 
 >[!WARNING]
 Es importante que para los siguientes pasos se tenga instalado **Node.js** y el administrador de paquetes **NPM**. [Aqui](https://nodejs.org/es/download) dejo enlace para la instalacion de Node (NPM viene por defecto en la instalacion de Node.)

@@ -70,7 +70,7 @@ A continuacion listare las tecnologias utilizadas en el proyecto y su finalidad:
 
 - **Argon2:** Es una funcion hash que permite tomar una cadena (string) y cifrarla de tal manera que sea imposible conocer el contenido original, en este proyecto utilice Argon2 para el almacenamiento de contraseñas en la base de datos.
 
-- **JWT:** Es una tecnologia que permite crear tokens que viajan de forma segura por la red, se encarga de cifrar cualquier tipo de informacion por medio de una palabra secreta, en donde gracias a esta ultima es posible validar si al servidor los tokens de sesion son veridicos, alterados y tener la posibilidad de guardar informacion importante en el token, sobre todo para la sesion del usuario.
+- **JWT:** Es una tecnologia que permite crear tokens que viajan de forma segura por la red, se encarga de cifrar cualquier tipo de informacion por medio de una palabra secreta, en donde gracias a esta ultima es posible validar si los tokens de sesion son veridicos, alterados y tener la posibilidad de guardar informacion importante en el token, sobre todo para la sesion del usuario.
 
 - **Docker:** Con el fin de que la base de datos MongoDB pudiera correr en cualquier maquina, decidi utilizar Docker, ya que me permitio contenerizar la base de datos y poder usarla sin la necesidad de descargar todo el SGBD, haciendo muchisimo mas ligera y portable la base de datos, que es una parte fundamental de la aplicacion web construida.
 

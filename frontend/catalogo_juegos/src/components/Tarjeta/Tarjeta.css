@@ -1,0 +1,43 @@
+.card-img-top{
+  object-fit: fill;
+}
+
+.card{
+  background-color: transparent !important;
+  transition: .2s ease;
+  position: relative;
+}
+
+.badge{
+  position: absolute;
+  top: -0.4rem;
+  right:-.1rem;
+  color: black !important;
+  font-size: 1rem !important;
+}
+
+.card:hover{
+  scale: 1.04;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.card-title{
+  color: #FCA311 !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.card-img-top, .card{
+  height: 20rem;
+  width: 16rem;
+}
+
+@media (max-width:300px){
+ .card-img-top, .card{
+    height: 17rem;
+    width: 13rem;
+  } 
+}

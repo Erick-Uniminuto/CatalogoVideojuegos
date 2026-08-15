@@ -1,0 +1,7 @@
+#boton-componente{
+  transition: .2s ease;
+}
+#boton-componente:hover{
+  scale: 1.03;
+  transition: .2s ease;
+}

@@ -1,0 +1,22 @@
+.detalle-imagen{
+  object-fit: fill;
+}
+@media (min-width:700px){
+  .detalle-imagen{
+    height: 40rem !important;
+    width: 30rem !important;
+  }
+}
+
+@media (min-width:360px){
+  .detalle-imagen{
+    height: 30rem;
+    width: 20rem;
+  }
+}
+@media (max-width:360px){
+  .detalle-imagen{
+    height: 20rem;
+    width: 10rem;
+  }
+}

@@ -1,0 +1,28 @@
+.foto-usuario{
+  height: 3.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-left: .6rem;
+}
+.foto-usuario:hover{
+  outline: solid white;
+}
+#navbarNavAltMarkup{
+  justify-content: end;
+}
+.nav-link{
+  text-align: center;
+  color: black;
+}
+.nav-link:hover{
+  color: white !important;
+}
+.icon-nav{
+  height: 3.5rem;
+}
+#nav-bar{
+  background-color: #FCA311;
+}
+.navbar-toggler{
+  border: none !important;
+}

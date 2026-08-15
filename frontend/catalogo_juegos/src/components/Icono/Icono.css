@@ -1,0 +1,8 @@
+.icono-componente{
+  transition: .2s ease;
+}
+
+.icono-componente:hover{
+  transform: translateY(-3px);
+  transition: .2s ease;
+}

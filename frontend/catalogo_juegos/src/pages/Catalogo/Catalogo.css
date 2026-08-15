@@ -1,0 +1,19 @@
+.titulo-catalogo{
+  color: #FCA311;
+}
+#contenedor-tarjas-juegos{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* @media (max-width:623px){
+  #contenedor-tarjas-juegos{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+} */

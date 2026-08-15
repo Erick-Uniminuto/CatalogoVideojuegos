@@ -1,0 +1,53 @@
+.container-fluid{
+  background-color: #FCA311;
+}
+.redes-sociales{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+.boo{
+  height: 7rem;
+}
+.opcion-footer{
+  text-decoration: none;
+  color: black;
+  padding-bottom: .5rem;
+}
+.opcion-footer:hover{
+  color: white;
+}
+#conteneodr-opciones-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.barra-amor{
+  border: solid .1rem;
+  color: black;
+  opacity: 1;
+}
+@media(max-width:384px){
+  #control-footer-container{
+    text-align: center !important;
+  }
+  .redes-sociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #conteneodr-opciones-footer{
+    text-align: center !important;
+  }
+}
+@media(max-width:530px){
+  #boo-container{
+    display: none !important;
+  }
+}

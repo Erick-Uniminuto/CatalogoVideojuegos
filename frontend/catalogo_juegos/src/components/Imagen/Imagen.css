@@ -1,0 +1,18 @@
+.imagen-component{
+  object-fit: cover;
+}
+@media (min-width:1000px){
+ .imagen-component{
+    height: 20rem !important;
+  } 
+}
+@media (min-width:700px){
+  .imagen-component{
+    height: 13rem;
+  } 
+}
+@media (max-width:700px){
+  .imagen-component{
+    height: 9rem;
+  } 
+}

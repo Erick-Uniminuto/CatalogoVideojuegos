@@ -1,0 +1,29 @@
+.texto-presentacion{
+  color: white;
+}
+#primera-fila-landing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#segunda-fila-landing{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.opciones-bienvenida{
+  max-width: 500px;
+}
+@media (max-width:520px){
+  #primera-fila-landing,#segunda-fila-landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #primer-imagen-landing{
+    margin-top: 2rem;
+  }
+}

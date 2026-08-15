@@ -161,8 +161,7 @@ npm run dev
 
 Una vez se ejecute ese comando, el backend estara iniciado, y ahora si, se podra interactuar con la aplicacion web de forma completa, creando videojuegos, editando y creando usuarios, ya que la base de datos funcionara y estara guardando los datos y manteniendo la persistencia.
 
->[!IMPORTANT]
-Cuando se cierre el proyecto, si el contendor en **Docker Desktop** se elimina, se perdera toda la información creada, pero siempre y cuando al crear el contenedor se utiliza la carpeta **Volumenes** del proyecto, toda la informacion se mantendrá guardada y persistente.
-
 >[!TIP]
 Una vez que el back-end este en funcionamiento, se estara utilizando el puerto 3000, es importante no cambiarlo. Si se desea conocer como funciona la API, en el enlace **http://localhost:3000/docs** se encuentra toda la documentacion de la API hecha con Swagger, servida por el archivo **api_docs.yaml**
+
+🩷🩷🩷

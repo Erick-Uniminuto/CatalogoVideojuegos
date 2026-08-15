@@ -137,7 +137,7 @@ Si la ejecución final del contenedor no salio correctamente, por favor revisar 
 Una vez que se tiene ejecutando Docker con MongoDB, hay que volver a la carpeta en donde se encuentra el proyecto clonado y abrir una terminal alli. 
 
 >[!WARNING]
-Es importante que para los siguientes pasos se tenga instalado **Node.js** y el administrador de paquetes **NPM** o el de su preferencia. [Aqui](https://nodejs.org/es/download) dejo enlace para la instalacion de Node (NPM viene por defecto en la instalacion de Node.)
+Es importante que para los siguientes pasos se tenga instalado **Node.js** y el administrador de paquetes **NPM**. [Aqui](https://nodejs.org/es/download) dejo enlace para la instalacion de Node (NPM viene por defecto en la instalacion de Node.)
 
 Una vez abierta la terminal se deben ejecutar los siguientes comandos **en el orden que se presentan aquí.**, es importante garantizar que donde se abre la terminal, se encuentre el archivo **package.json**, de lo contrario no funcionara el comando o realizara alguna accion no deseada.
 

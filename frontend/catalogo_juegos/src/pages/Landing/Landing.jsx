@@ -67,7 +67,7 @@ function Landing(){
         <div className="opciones-bienvenida">
           <BotonesBloque bg={'#FCA311'} texto={'Iniciar sesión'} size={'1.2rem'} mt={'1rem'}
           fontColor={'black'} click={() => redirigir('/iniciar/sesion')}/>
-          <BotonesBloque bg={'#FCA311'} texto={'Registrate'} size={'1.2rem'} mt={'1rem'}
+          <BotonesBloque bg={'#FCA311'} texto={'Registrarse'} size={'1.2rem'} mt={'1rem'}
           fontColor={'black'} click={() => redirigir('/registro')}/>
         </div>
       </div>

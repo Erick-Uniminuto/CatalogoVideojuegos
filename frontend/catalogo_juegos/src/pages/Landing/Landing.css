@@ -13,9 +13,13 @@
   justify-content: center;
   align-items: center;
 }
-.opciones-bienvenida{
-  max-width: 500px;
+
+@media(min-width:800px){
+  .opciones-bienvenida{
+    width: 700px !important;
+  }
 }
+
 @media (max-width:520px){
   #primera-fila-landing,#segunda-fila-landing{
     display: flex;

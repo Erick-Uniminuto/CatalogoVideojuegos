@@ -3,11 +3,14 @@ import InputFormulario from '../../components/InputFormulario/InputFormulario';
 import Boton from '../../components/Boton/Boton';
 import IniciarSesionService from '../../services/IniciarSesionService';
 import Cargando from '../../components/Cargando/Cargando';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Mensaje from '../../components/Mensaje/Mensaje';
 import { useNavigate } from 'react-router-dom';
+import ObtenerImagenUsuarioGenerador from '../../context/ObtenerImagenUsuarioContexto/ObtenerImagenUsuarioGenerador';
 
 function IniciarSesion(){
+  // Uso el contexto del para obtener la foto de perfil del usuario
+  const {ObtenerFotoPerfil} = useContext(ObtenerImagenUsuarioGenerador);
   // Funcion para navegar por la apliacion web
   const navigate = useNavigate();
   // Estado de carga o error en el inicio de sesion
@@ -24,6 +27,7 @@ function IniciarSesion(){
     IniciarSesionService(datosEnviar.at(0),datosEnviar.at(1)).then(ans => {
       // Si el inicio de sesion fue correcto
       document.cookie = `token=${ans.msg};path=/`
+      ObtenerFotoPerfil();
       navigate('/home');
       return
       // Si ocurre un error al inicio de sesion, se muestra el mensaje al usuario

@@ -22,7 +22,7 @@ async function ValidarDatos(corr:string, password:string){
     const resultado = ValidarHash(password,UserPass).then(ans => {
       // Si la validacion fue correcta se envia al usuario un mensaje de exito
       if(ans){
-        return [200, dummyData?._id.toString(), dummyData?.nombre, corr];
+        return [200, dummyData?._id.toString(), dummyData?.nombre, corr, dummyData?.imagen];
       }
       // Si la validacion no fue valida, se envia al usuario un mensaje de error
       return [404, 'Correo o contraseña incorrectos']

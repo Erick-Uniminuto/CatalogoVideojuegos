@@ -9,7 +9,7 @@ import ObtenerColeccionUsuarioRouter from './routes/ObtenerColeccionUsuario.js';
 import cors from 'cors';
 import swaggerUI from 'swagger-ui-express';
 // @ts-ignore
-import specs from '../../swagger.js';
+import specs from '../../swagger/swagger.js';
 
 
 
@@ -25,26 +25,26 @@ app.use("/docs",swaggerUI.serve, swaggerUI.setup(specs))
 // Defino el puerto que utilizara la API
 const PORT = 3000;
 
-// Exporto el endpoint encargado de agregar un nuevo usuario ✅
+// Exporto el endpoint encargado de agregar un nuevo usuario 
 app.use('/', AddUserRouter);
 
 // Exporto el endpoint encargado de validar el inicio de sesion 
-// del usuario ✅
+// del usuario 
 app.use('/', IniciarSesionRouter)
 
-// Endpoint para validar el token del usuario ✅
+// Endpoint para validar el token del usuario 
 app.use('/', ValidacionSesionRouter)
 
-// Endpoint para agregar un nuevo juego ✅
+// Endpoint para agregar un nuevo juego 
 app.use('/', AgregarJuegoRoute)
 
-// Endpoint para editar un juego dentro de la coleccion del usuario ✅
+// Endpoint para editar un juego dentro de la coleccion del usuario 
 app.use('/', EditarVideoJuegoRouter)
 
-// Enpdoint para obtener todos los videojuegos ✅
+// Enpdoint para obtener todos los videojuegos 
 app.use('/', ObtenerVideojuegosRouter)
 
-// Endpoint para obtener toda la coleccion del usuario ✅
+// Endpoint para obtener toda la coleccion del usuario 
 app.use('/', ObtenerColeccionUsuarioRouter)
 
 // Inicio el servidor para que comience a escuchar

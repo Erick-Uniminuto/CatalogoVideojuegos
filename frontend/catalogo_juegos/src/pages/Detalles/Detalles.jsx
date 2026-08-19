@@ -61,11 +61,12 @@ function Detalles(){
     })
   },[])
   return(
-    <section className="container-sm text-center">
+    <section className="container-sm text-center
+    d-flex justify-conent-center align-items-center flex-column">
       {cargando ? cargando :
       <>
       <div className="row mb-4">
-        <div className="col d-flex justify-conent-center align-items-center flex-column">
+        <div className="col">
           <h1 className="nombre-videojuego text-center mb-4">
             {juego.at(0)}
           </h1>
@@ -73,25 +74,27 @@ function Detalles(){
           URL={juego.at(1)}/>
         </div>
       </div>
-      <div className="row">
-        <div className="col text-center">
-          <div className="info-juego">
-            {juego.slice(3).map(elemento => (
-              <div key={elemento}>
-                <h2 className="categoria-info">
-                  {elemento.split('=').at(0)}
-                </h2>
-                <h4 className="info-categoria mb-4">
-                  {elemento.split('=').at(1)}
-                </h4>
-              </div>
-            ))}
+      <div className="contenedor-detalles-videojuego">
+        <div className="row">
+          <div className="col text-start">
+            <div className="info-juego">
+              {juego.slice(3).map(elemento => (
+                <div key={elemento}>
+                  <h2 className="categoria-info">
+                    {elemento.split('=').at(0)}
+                  </h2>
+                  <h4 className="info-categoria mb-4">
+                    {elemento.split('=').at(1)}
+                  </h4>
+                </div>
+              ))}
+            </div>
           </div>
+          <BotonesBloque bg={'#FCA311'} texto={'Agregar a tu colección'} fontColor={'black'}
+          size={'1.2rem'} mt={'1rem'} click={enviarJuego} />
+          <BotonesBloque bg={'#FCA311'} texto={'Volver atras'} fontColor={'black'}
+          size={'1.2rem'} mt={'1rem'} click={Volver} />
         </div>
-        <BotonesBloque bg={'#FCA311'} texto={'Agregar a tu colección'} fontColor={'black'}
-        size={'1.2rem'} mt={'1rem'} click={enviarJuego} />
-        <BotonesBloque bg={'#FCA311'} texto={'Volver atras'} fontColor={'black'}
-        size={'1.2rem'} mt={'1rem'} click={Volver} />
       </div>
       </>
       }

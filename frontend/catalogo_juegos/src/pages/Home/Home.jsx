@@ -34,7 +34,6 @@ function Home(){
       setCargando(<PantallaError texto={error.message}/>)
     })
   }
-console.log(coleccion)
 // Apenas carga el componente, obtengo la coleccion del usuario
   useEffect(() => {
     ObtenerColeccionUsuario(ObtenerToken()).then(ans => {

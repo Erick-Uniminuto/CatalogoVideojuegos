@@ -2,8 +2,8 @@
 
 import jwt from "jsonwebtoken";
 
-function CrearToken(nombre:string, correo:string, id:string){
-  return jwt.sign({nombre:nombre,correo:correo,id:id},'shhh')
+function CrearToken(nombre:string, correo:string, id:string, imagen:string){
+  return jwt.sign({nombre:nombre,correo:correo,id:id, imagen:imagen},'shhh')
   // Retorno el token de sesion
 }
 

@@ -1,3 +1,21 @@
 .borde-externo-formulario{
   background-color: #FCA311;
 }
+
+@media (min-width:620px){
+ .borde-externo-formulario{
+    width: 500px !important;
+  } 
+}
+
+@media (min-width:620px){
+ .borde-externo-formulario{
+    width: 300px;
+  } 
+}
+
+@media (max-width:400px){
+ .borde-externo-formulario{
+    width: 210px;
+  } 
+}

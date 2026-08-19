@@ -29,7 +29,7 @@ IniciarSesionRouter.post('/verify', (req,res) => {
       res.status(ans.at(0)).set({
         'Content-Type':'application/json'
         // @ts-ignore
-      }).json({'msg':CrearToken(ans.at(2),ans.at(3),ans.at(1))})
+      }).json({'msg':CrearToken(ans.at(2),ans.at(3),ans.at(1), ans.at(4))})
     });
     return
   } catch (error) {

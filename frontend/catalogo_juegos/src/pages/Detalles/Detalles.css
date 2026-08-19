@@ -12,3 +12,11 @@
   color: #FCA311;
   text-transform: capitalize;
 }
+
+@media (min-width:780px){
+  .contenedor-detalles-videojuego{
+    width: 720px;
+  }
+}
+
+/* 720 de ancho como maximo */

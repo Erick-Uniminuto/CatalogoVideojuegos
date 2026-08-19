@@ -1,5 +1,6 @@
 #boton-componente{
   transition: .2s ease;
+  text-transform: capitalize;
 }
 #boton-componente:hover{
   scale: 1.03;

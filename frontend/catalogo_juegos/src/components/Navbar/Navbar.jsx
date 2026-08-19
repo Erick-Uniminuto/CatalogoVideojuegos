@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import './Navbar.css'
+import { useEffect } from "react";
+import { useContext } from "react";
+import ObtenerImagenUsuarioGenerador from "../../context/ObtenerImagenUsuarioContexto/ObtenerImagenUsuarioGenerador";
 
 function Navbar(){
+  // Uso el contexto para obtener la foto de perfil del usuario
+  const { imagen } = useContext(ObtenerImagenUsuarioGenerador);
   return(
     <nav className="navbar navbar-expand-sm mb-5" id="nav-bar">
       <div className="container-lg">
@@ -22,7 +27,7 @@ function Navbar(){
             <Link className="nav-link" to='/registro'>Registrarse</Link>
             <Link to='/user'>
             <img className="foto-usuario" 
-              src="https://i.pinimg.com/474x/8d/2b/ee/8d2bee5caa349cca166838f1b55390d1.jpg" 
+              src={imagen} 
               alt="foto de perfil del usario"/>           
             </Link> 
           </div>

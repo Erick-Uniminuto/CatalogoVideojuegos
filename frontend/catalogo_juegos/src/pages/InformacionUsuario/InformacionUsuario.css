@@ -1,1 +1,25 @@
+.imagen-usuario-detalles-usuario{
+  height: 17rem;
+  width: 17rem;
+  object-fit: cover;
+  border-radius: 999px;
+}
 
+@media (min-width:620px){
+  .container-botones-usuario{
+    width: 500px;
+  }
+}
+
+@media (max-width:620px){
+ .container-botones-usuario{
+    width: 300px;
+  } 
+}
+
+@media (max-width:370px){
+  .imagen-usuario-detalles-usuario{
+    height: 10rem;
+    width: 10rem;
+  }
+}

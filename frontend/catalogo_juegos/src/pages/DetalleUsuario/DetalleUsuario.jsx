@@ -68,7 +68,7 @@ function DetalleUsuario(){
     })
   },[])
   return(
-    <section className="container-md">
+    <section className="container-md d-flex flex-column justify-content-center align-items-center">
       {cargando ? <div className="cargando-container text-center">{cargando}</div> :
       <>
       <div className="row">
@@ -81,50 +81,52 @@ function DetalleUsuario(){
           radio={'2rem'}/>
         </div>
       </div>
-      <div className="row">
-        <h2 className="seccion-detalles text-center mt-4">
-          Cambiar Estado
-        </h2>
-        {EstadosDisponibles.map(estado => (
-          <div className="col" key={estado}>
-            <BotonesBloque bg={estado.split('=').at(1)} texto={estado.split('=').at(0)} 
-            fontColor={'black'} size={'1.2rem'} mt={'1.1rem'} 
-            click={() => {
-              setEstado(estado.split('=').at(0))
-              alert(`Has seleccionado ${estado.split('=').at(0).toUpperCase()} recuerda guardar tus cambios en el boton de la parte inferior`)
-            }}/>
-          </div>
-        ))}
-      </div>
-      {/* juego.slice(0,-1) */}
-      <div className="row mt-4 d-flex flex-column">
-        <div className="col text-center">
-          {juego.slice(0,-2).map(ele => (
-            <div className="dummy" key={ele}>
-            <h2 className="categoria-info">
-              {ele.at(0)}
-            </h2>
-            <h4 className="info-categoria mb-4">
-              {ele.at(1)}
-            </h4>
+      <div className="contenedor-detalles-videojuego">
+        <div className="row">
+          <h2 className="seccion-detalles text-start mt-4">
+            Cambiar Estado
+          </h2>
+          {EstadosDisponibles.map(estado => (
+            <div className="col" key={estado}>
+              <BotonesBloque bg={estado.split('=').at(1)} texto={estado.split('=').at(0)} 
+              fontColor={'black'} size={'1.2rem'} mt={'1.1rem'} 
+              click={() => {
+                setEstado(estado.split('=').at(0))
+                alert(`Has seleccionado ${estado.split('=').at(0).toUpperCase()} recuerda guardar tus cambios en el boton de la parte inferior`)
+              }}/>
             </div>
           ))}
-          <h2 className="categoria-info">
-            Lo encuentras en:
-          </h2>
-          <h4 className="info-categoria mb-4">
-            {juego.at(-1).join(', ')}
-          </h4>
         </div>
-        <div className="col" key={estado}>
-          <BotonesBloque texto={'Guardar cambios'} mt={'1rem'} bg={'#198754'} fontColor={'black'} 
-          size={'1.2rem'} click={ActualizarEstado}/>
-          <BotonesBloque texto={'Eliminar de tu coleccion'} mt={'1rem'} bg={'#DC3545'} fontColor={'black'} 
-          size={'1.2rem'} click={RealizarEliminacion} />
-          <BotonesBloque texto={'Editar videojuego'} mt={'1rem'} bg={'#0DCAF0'} fontColor={'black'} 
-          size={'1.2rem'} click={() => navegar(`/editar-juego/${id}`)}/>
-          <BotonesBloque texto={'Volver atras'} mt={'1rem'} bg={'#FCA311'} fontColor={'black'} 
-          size={'1.2rem'} click={() => navegar(-1)}/>
+        {/* juego.slice(0,-1) */}
+        <div className="row mt-4 d-flex flex-column">
+          <div className="col text-start">
+            {juego.slice(0,-2).map(ele => (
+              <div className="dummy" key={ele}>
+              <h2 className="categoria-info">
+                {ele.at(0)}
+              </h2>
+              <h4 className="info-categoria mb-4">
+                {ele.at(1)}
+              </h4>
+              </div>
+            ))}
+            <h2 className="categoria-info">
+              Lo encuentras en:
+            </h2>
+            <h4 className="info-categoria mb-4">
+              {juego.at(-1).join(', ')}
+            </h4>
+          </div>
+          <div className="col" key={estado}>
+            <BotonesBloque texto={'Guardar cambios'} mt={'1rem'} bg={'#198754'} fontColor={'black'} 
+            size={'1.2rem'} click={ActualizarEstado}/>
+            <BotonesBloque texto={'Eliminar de tu coleccion'} mt={'1rem'} bg={'#DC3545'} fontColor={'black'} 
+            size={'1.2rem'} click={RealizarEliminacion} />
+            <BotonesBloque texto={'Editar videojuego'} mt={'1rem'} bg={'#0DCAF0'} fontColor={'black'} 
+            size={'1.2rem'} click={() => navegar(`/editar-juego/${id}`)}/>
+            <BotonesBloque texto={'Volver atras'} mt={'1rem'} bg={'#FCA311'} fontColor={'black'} 
+            size={'1.2rem'} click={() => navegar(-1)}/>
+          </div>
         </div>
       </div>
       </>
@@ -135,6 +137,3 @@ function DetalleUsuario(){
 
 
 export default DetalleUsuario;
-
-
-// Revisar las etiquetas de las tarjetas (deben cambiar)

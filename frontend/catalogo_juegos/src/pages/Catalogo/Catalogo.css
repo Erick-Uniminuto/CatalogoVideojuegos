@@ -1,12 +1,13 @@
 .titulo-catalogo{
   color: #FCA311;
 }
-#contenedor-tarjas-juegos{
+#contenedor-tarjetas-juegos{
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 2.5rem;
 }
 /* @media (max-width:623px){
   #contenedor-tarjas-juegos{

@@ -57,20 +57,22 @@ function Catalogo(){
         type={'button'} click={BuscarJuegos}/>}
         placeholder={'Busca por nombre o genero'}/>
       </div>
-      <div className="row mt-5 d-flex justify-content-center align-items-center">
+      <div className="contenedor-exterior-tarjetas mt-5">
         {cargando ? cargando : 
         <>
+        <div className="col" id='contenedor-tarjetas-juegos'>
           {juegos.map(juego => (
-            <div className="col" id='contenedor-tarjas-juegos' key={juego._id}>
-              <Tarjeta nombre={juego.nombre_juego} 
-              URL={juego.imagen} click={() => DetallesJuego(juego._id)}/>
-            </div>
+            <Tarjeta nombre={juego.nombre_juego} 
+            URL={juego.imagen} click={() => DetallesJuego(juego._id)} key={juego._id}/>
           ))}
+        </div>
         </>
         }
       </div>
     </section>
   )
 };
+
+// contenedor-interior-tarjetas
 
 export default Catalogo;

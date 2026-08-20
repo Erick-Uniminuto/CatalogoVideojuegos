@@ -1,3 +1,11 @@
 .titulo-home{
   color: #FCA311;
 }
+.contenedor-interior-tarjetas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}

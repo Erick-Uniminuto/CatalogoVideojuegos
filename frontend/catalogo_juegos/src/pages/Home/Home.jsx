@@ -58,16 +58,16 @@ function Home(){
           mt={'1.5rem'} click={() => Navegar('/agregar-juego')}/>
         </div>
       </div>
-      <div className="row mt-5">
+      <div className="contenedor-exterior-tarjetas mt-5">
         {cargando ? <div className='text-center mt-4'>{cargando}</div> :          
         <>
+        <div className="contenedor-interior-tarjetas">
         {coleccion.map(ele => (
-          <div className="col d-flex mt-3 justify-content-center align-items-center" key={ele._id}>
-            <Tarjeta nombre={ele.nombre_juego} URL={ele.imagen} click={() => Navegar(
-              `/detalle/juego/usuario/${ele._id}`
+          <Tarjeta nombre={ele.nombre_juego} URL={ele.imagen} key={ele._id} click={() => Navegar(
+            `/detalle/juego/usuario/${ele._id}`
             )} estado={ele.estado} />
-          </div>
         ))}
+        </div>
         </>       
         }
       </div>

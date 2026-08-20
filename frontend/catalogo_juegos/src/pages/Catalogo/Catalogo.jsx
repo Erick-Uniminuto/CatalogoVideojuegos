@@ -57,7 +57,7 @@ function Catalogo(){
         type={'button'} click={BuscarJuegos}/>}
         placeholder={'Busca por nombre o genero'}/>
       </div>
-      <div className="contenedor-exterior-tarjetas mt-5">
+      <div className="contenedor-exterior-tarjetas mt-5 text-center">
         {cargando ? cargando : 
         <>
         <div className="col" id='contenedor-tarjetas-juegos'>

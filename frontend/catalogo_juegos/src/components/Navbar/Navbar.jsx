@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import './Navbar.css'
-import { useEffect } from "react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ObtenerImagenUsuarioGenerador from "../../context/ObtenerImagenUsuarioContexto/ObtenerImagenUsuarioGenerador";
 
 function Navbar(){
   // Uso el contexto para obtener la foto de perfil del usuario
-  const { imagen } = useContext(ObtenerImagenUsuarioGenerador);
+  const { imagen, ObtenerFotoPerfil } = useContext(ObtenerImagenUsuarioGenerador);
+  useEffect(() => {
+    ObtenerFotoPerfil()
+  },[])
   return(
     <nav className="navbar navbar-expand-sm mb-5" id="nav-bar">
       <div className="container-lg">
